@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// * {
+//   background: #003c32;
+// }
+
+h1 {
+  font-size: 48px;
+  line-height: normal;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: normal;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 21px;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 20.83px;
+}
+
+.item {
+  &::before {
+    content: "• ";
+
+    height: 4px;
+    color: #8c7dff;
+    top: 100%;
+    left: 0;
+  }
+}
+
+.link {
+  color: #949d9a;
+  background: red;
+
+  &::before {
+    content: "";
+  }
+
+  &.active {
+    &::before {
+      @apply text-[#00F78C];
+    }
+  }
+}
+
+.benefits {
+  position: relative;
+  padding-bottom: 12px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 1px;
+    top: 110px;
+    bottom: 50px;
+    left: 0;
+    background: white;
+  }
+}
+
+.active-component {
+  background-color: green;
+  /* Add any other styles you want for the active component */
+}
+
+.inactive-component {
+  background-color: initial; /* Set the background color to its default value */
+  /* Add any other styles you want for the inactive component */
+}
