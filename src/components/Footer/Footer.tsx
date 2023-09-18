@@ -1,16 +1,18 @@
 const Footer = () => {
   return (
     <footer className="w-full mt-4 p-4">
-      <div className="w-full flex items-center justify-between">
+      <div className="w-full flex items-center justify-between container">
         <div>
           <p className="text-[#003c32]">
             Copyright © {new Date().getFullYear()} All rights reserved
           </p>
         </div>
+
         <div className="flex items-center space-x-20">
           <p className="text-[#003c32]">Privacy Policy</p>
           <p className="text-[#003c32]">Terms Of Service</p>
-          <p className="text-[#003c32]">
+          <p className="text-[#003c32]"></p>
+          <div className="flex gap-2">
             <span>
               <svg
                 width={16}
@@ -27,7 +29,7 @@ const Footer = () => {
                 />
               </svg>
             </span>
-          </p>
+          </div>
         </div>
       </div>
     </footer>

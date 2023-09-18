@@ -1,6 +1,15 @@
+"use client"
+
+import { motion } from "framer-motion"
+
 const Benefits = () => {
   return (
-    <div className="px-8 py-[55px] ">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ ease: "easeInOut", duration: 2 }}
+      className="px-8 py-[55px] "
+    >
       <div className=" min-w-[180px] mr-[160px] mt-[120px] ">
         <span className="item flex gap-2 ">
           <p className="text-white">BENEFITS</p>
@@ -205,7 +214,7 @@ const Benefits = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

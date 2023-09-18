@@ -1,6 +1,7 @@
 "use client"
 
 import { cn } from "@/lib/utils"
+import { motion } from "framer-motion"
 import { useState } from "react"
 import { Crypto } from "../Crypto"
 import { Trade } from "../Trade"
@@ -22,7 +23,12 @@ const Product = () => {
   }
 
   return (
-    <div className="px-8 py-[55px] flex ">
+    <motion.div
+      initial={{ opacity: 0, translateY: 50 }}
+      animate={{ opacity: 1, translateY: 0 }}
+      transition={{ ease: "easeInOut", duration: 1 }}
+      className="px-8 py-[55px] flex "
+    >
       <div className=" min-w-[180px] mr-[160px] mt-[140px] ">
         <span className="item flex gap-2 ">
           <p className="text-white">PRODUCTS</p>
@@ -59,7 +65,7 @@ const Product = () => {
         {showTradeBorrowContent && <Trade />}
         {showCryptoMortgage && <Crypto />}
       </div>
-    </div>
+    </motion.div>
   )
 }
 

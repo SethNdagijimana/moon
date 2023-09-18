@@ -1,4 +1,4 @@
-import { Benefits } from "@/components/Benefits"
+import { Benefit } from "@/components/Benefit"
 import { Contact } from "@/components/Contact"
 import { Hero } from "@/components/Hero"
 import { Partner } from "@/components/Partner"
@@ -24,7 +24,8 @@ export default function Home() {
       </section>
 
       <section className="container ">
-        <Benefits />
+        {/* <Benefits /> */}
+        <Benefit />
       </section>
 
       <section className=" container  ">

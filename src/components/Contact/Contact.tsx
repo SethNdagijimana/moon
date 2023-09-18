@@ -1,5 +1,6 @@
 "use client"
 
+import { motion } from "framer-motion"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { Footer } from "../Footer"
@@ -10,7 +11,12 @@ const Contact = () => {
 
   return (
     <>
-      <div className="mt-4 grid grid-cols-2 p-[60px] space-x-4 ">
+      <motion.div
+        initial={{ opacity: 0, translateY: 50 }}
+        animate={{ opacity: 1, translateY: 0 }}
+        transition={{ ease: "easeInOut", duration: 1 }}
+        className="mt-4 grid grid-cols-2 p-[60px] space-x-4 "
+      >
         <div className="mt-16">
           <div>
             <Logo />
@@ -61,20 +67,25 @@ const Contact = () => {
             </ul>
           </div>
 
-          <div className="mt-[200px] flex items-center gap-4 ">
-            <p className="text-sm text-[#003c32]">
-              Moon Mortgage Servicing LLC NMLS ID#2361495 Moon Mortgage
-              Residential LLC NMLS ID#2353334 Moon Mortgage LMA LLC NMLS
-              ID#2419733
-            </p>
-            <p className="text-sm text-[#003c32]">
-              Moon Mortgage is not a bank. All crypto services are provided by
-              Anchorage Digital, a federally chartered bank. Crypto assets are
-              not FDIC-insured products and may lose value
-            </p>
+          <div className="mt-[205px] flex items-center justify-center gap-4 ">
+            <div>
+              <p className="text-sm text-[#003c32]">
+                Moon Mortgage Servicing LLC NMLS ID#2361495 Moon Mortgage
+                Residential LLC NMLS ID#2353334 Moon Mortgage LMA LLC NMLS
+                ID#2419733
+              </p>
+            </div>
+
+            <div className="mb-7 ">
+              <p className="text-sm text-[#003c32]">
+                Moon Mortgage is not a bank. All crypto services are provided by
+                Anchorage Digital, a federally chartered bank. Crypto assets are
+                not FDIC-insured products and may lose value
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       <div className="container border-t-2 border-t-[#C3DDD4]">
         <Footer />

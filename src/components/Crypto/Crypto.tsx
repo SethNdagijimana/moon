@@ -4,9 +4,8 @@ import { Button } from "../ui/button"
 const Crypto = () => {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 2, scale: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ opacity: 0, translateY: 50 }}
+      animate={{ opacity: 1, translateY: 0 }}
       transition={{ ease: "easeInOut", duration: 1 }}
       className="mt-14"
     >
@@ -33,12 +32,12 @@ const Crypto = () => {
       </div>
 
       <div className="flex items-center gap-x-[110px] mt-8 benefits">
-        <div className="text-[#EEEEE7] mt-8">
+        <div className="text-[#EEEEE7] space-y-2">
           <h2 className="font-bricolage font-medium">$1m</h2>
           <p className="mt-2">Min loan amount</p>
         </div>
 
-        <div className="text-[#EEEEE7] mt-8">
+        <div className="text-[#EEEEE7] space-y-2">
           <h2 className="font-bricolage font-medium">BTC</h2>
           <p className="">Most popular collateral type </p>
         </div>
@@ -47,11 +46,11 @@ const Crypto = () => {
       <div className="mt-14 space-x-8">
         <Button
           text="JOIN WAITLIST "
-          className="bg-primary font-bold  text-secondary rounded-full w-[200px] hover:bg-[#8C7DFF] h-[60px]"
+          className="bg-primary font-bold transition font-bricolage text-secondary rounded-full w-[180px] hover:bg-[#8C7DFF] h-[60px]"
         />
         <Button
           text="LEARN MORE"
-          className="text-white border border-white rounded-full w-[200px] hover:bg-[#8C7DFF] hover:text-black h-[60px]"
+          className="text-white border transition font-bricolage border-white rounded-full w-[180px] hover:bg-[#8C7DFF] hover:text-black hover:border-none h-[60px]"
         />
       </div>
     </motion.div>
